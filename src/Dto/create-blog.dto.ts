@@ -1,12 +1,11 @@
 import {
   IsNotEmpty,
-  IsNumber,
   IsString,
   MaxLength,
   MinLength,
   ArrayMaxSize,
   ArrayNotEmpty,
-  IsObject
+  IsObject,
 } from 'class-validator';
 import { User } from 'src/Schema/user.schema';
 

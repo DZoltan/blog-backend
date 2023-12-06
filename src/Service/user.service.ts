@@ -10,7 +10,6 @@ export class UserService {
   constructor(@InjectModel('User') private userModel: Model<IUser>) {}
 
   async createUser(createUserDto: CreateUserDTO): Promise<IUser> {
-    console.log(createUserDto);
     const newUser = await new this.userModel(createUserDto);
     return newUser.save();
   }

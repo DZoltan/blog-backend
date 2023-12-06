@@ -9,13 +9,13 @@ import {
   Res,
 } from '@nestjs/common';
 import { BlogService } from 'src/Service/blog.service';
-import { response } from 'express';
 import { CreateBlogDTO } from 'src/Dto/create-blog.dto';
 import { UpdateBlogDTO } from 'src/Dto/update-blog.dto';
 
 @Controller('blog')
 export class BlogController {
   constructor(private readonly blogService: BlogService) {}
+
   @Post()
   async createBlog(@Res() response, @Body() createBlogDTO: CreateBlogDTO) {
     try {
